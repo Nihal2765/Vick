@@ -32,7 +32,7 @@ async def is_admins(chat_id: int):
 
 @bot.on_message(filters.command("start"))
 async def start(client, message):
-        await message.reply_text("Hi! My name is Cute Queen. I'm an Artificial Intelligence\n /chatbot - [on|off]")
+        await message.reply_text("ʜɪ! ᴍʏ ɴᴀᴍᴇ ɪs ᴄᴜᴛᴇ ǫᴜᴇᴇɴ. ɪ'ᴍ ᴀɴ ᴀʀᴛɪғɪᴄɪᴀʟ ɪɴᴛᴇʟʟɪɢᴇɴᴄᴇ\n /chatbot - [on|off]")
 
 
 @bot.on_message(
@@ -48,14 +48,14 @@ async def chatbotofd(client, message):
            await is_admins(chat_id)
         ):
            return await message.reply_text(
-                "You are not admin"
+                "ʏᴏᴜ ᴀʀᴇ ɴᴏᴛ ᴀᴅᴍɪɴ 😒"
             )
     is_vick = vick.find_one({"chat_id": message.chat.id})
     if not is_vick:
         vick.insert_one({"chat_id": message.chat.id})
-        await message.reply_text(f"Chatbot Disabled!")
+        await message.reply_text(f"ᴄʜᴀᴛʙᴏᴛ ᴅɪsᴀʙʟᴇᴅ 🥺🥺")
     if is_vick:
-        await message.reply_text(f"ChatBot Is Already Disabled")
+        await message.reply_text(f"ᴄʜᴀᴛ ʙᴏᴛ ɪs ᴀʟʀᴇᴀᴅʏ ᴅɪsᴀʙʟᴇᴅ 😑😑")
     
 
 @bot.on_message(
@@ -75,17 +75,17 @@ async def chatboton(client, message):
             )
     is_vick = vick.find_one({"chat_id": message.chat.id})
     if not is_vick:           
-        await message.reply_text(f"Chatbot Is Already Enabled")
+        await message.reply_text(f"ᴄʜᴀᴛʙᴏᴛ ɪs ᴀʟʀᴇᴀᴅʏ ᴇɴᴀʙʟᴇᴅ 😊")
     if is_vick:
         vick.delete_one({"chat_id": message.chat.id})
-        await message.reply_text(f"ChatBot Is Enable!")
+        await message.reply_text(f"ᴄʜᴀᴛʙᴏᴛ ɪs ᴇɴᴀʙʟᴇ! ❣️")
     
 
 @bot.on_message(
     filters.command("chatbot", prefixes=["/", ".", "?", "-"])
     & ~filters.private)
 async def chatbot(client, message):
-    await message.reply_text(f"**Usage:**\n/chatbot [on|off] only group")
+    await message.reply_text(f"**Usage:**\n/chatbot [on|off] ᴏɴʟʏ ɢʀᴏᴜᴘ")
 
 
 @bot.on_message(
