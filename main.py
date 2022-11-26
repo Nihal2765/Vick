@@ -7,10 +7,10 @@ import os
 import re
 
 
-API_ID = os.environ.get("API_ID", None) 
-API_HASH = os.environ.get("API_HASH", None) 
-BOT_TOKEN = os.environ.get("BOT_TOKEN", None) 
-MONGO_URL = os.environ.get("MONGO_URL", None)
+API_ID = os.environ.get("API_ID", "24469957") 
+API_HASH = os.environ.get("API_HASH", "9c230ad3e6df442f2c0d27c27ba0833a") 
+BOT_TOKEN = os.environ.get("BOT_TOKEN", "5816804197:AAGSMegL-EzzLs7TB5pujwRIM8_7qsGXeB0") 
+MONGO_URL = os.environ.get("MONGO_URL", "mongodb+srv://Music:Music@cluster0.f9x4i.mongodb.net/Cluster0?retryWrites=true&w=majority")
 
 
 bot = Client(
